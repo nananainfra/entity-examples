@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: inventory-api
+  description: API for inventory-service
+  links:
+   - url: http://localhost:8080/swagger-ui.html
+     title: Swagger UI
+  tags:
+    - http
+spec:
+  type: thrift
+  lifecycle: production
+  owner: group:guests
+  system: inventory-app
+  consumesApis:
+  - api:inventory-api
+
